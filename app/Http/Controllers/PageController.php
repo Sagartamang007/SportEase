@@ -2,14 +2,16 @@
 
 namespace App\Http\Controllers;
 use App\Models\ContactUs;
-
+use App\Models\futsal_court;
 use Illuminate\Http\Request;
 
 class PageController extends Controller
 {
     public function home()
     {
-        return view('admin.pages.home');
+        $futsal = futsal_court::get();
+
+        return view('admin.pages.home',compact('futsal'));
     }
 
     public function aboutus()

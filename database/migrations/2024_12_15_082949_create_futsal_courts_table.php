@@ -21,6 +21,7 @@ return new class extends Migration
             $table->string('opening_time');
             $table->string('closing_time');
             $table->integer('average_price');
+            $table->foreignId('user_id');
             $table->timestamps();
         });
     }
