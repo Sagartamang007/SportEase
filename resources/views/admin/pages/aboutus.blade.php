@@ -100,7 +100,7 @@
         <div class="col-12 text-center">
             <h2>Get In Touch</h2>
             <p>If you have any questions or feedback, feel free to contact us. We'd love to hear from you!</p>
-            <a href="{{route('contactus')}}" class="btn btn-primary btn-lg">Contact Us</a>
+            {{-- <a href="{{route('contactus')}}" class="btn btn-primary btn-lg">Contact Us</a> --}}
         </div>
     </div>
 </div>

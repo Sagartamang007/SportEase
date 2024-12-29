@@ -12,7 +12,7 @@
             <div class="container text-center">
                 <h1>Welcome to SportEase</h1>
                 <p>Your trusted solution for seamless Futsal bookings.</p>
-                <a href="#" class="btn nums">Book Now</a>
+                <a href="{{Route('booking')}}" class="btn nums">Book Now</a>
             </div>
         </div>
     </section>
@@ -50,7 +50,7 @@
                                     <p><strong>Number of Courts:</strong> 2</p>
                                     <p><strong>Opening Time:</strong> 6:00 AM</p>
                                     <p><strong>Closing Time:</strong> 10:00 PM</p>
-                                    <a href="#" class="btn nums-but">Book Now</a>
+                                    <a href="{{Route('booking')}}" class="btn nums-but">Book Now</a>
                                 </div>
                             </div>
                         </div>

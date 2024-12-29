@@ -1,6 +1,11 @@
 <x-guest-layout>
     <!-- Outer Div for Form Container -->
     <div class="flex justify-center items-center w-full h-screen bg-login">
+        @if (session('success'))
+            <div class="alert alert-success">
+                {{ session('success') }}
+            </div>
+        @endif
         <div class="login-container">
             <!-- Logo or Title -->
             <div class="login-logo">
@@ -18,7 +23,8 @@
                         <x-input-label for="email" :value="__('Email')" />
                     </div>
                     <div class="relative">
-                        <input id="email" class="block mt-1 w-full pr-10 pl-4" type="email" name="email" :value="old('email')" required autofocus autocomplete="username" />
+                        <input id="email" class="block mt-1 w-full pr-10 pl-4" type="email" name="email"
+                            :value="old('email')" required autofocus autocomplete="username" />
                     </div>
                     <x-input-error :messages="$errors->get('email')" class="mt-2" />
                 </div>
@@ -30,8 +36,11 @@
                         <x-input-label for="password" :value="__('Password')" />
                     </div>
                     <div class="relative">
-                        <input id="password" class="block mt-1 w-full pr-10 pl-4" type="password" name="password" required autocomplete="current-password" />
-                        <i id="password-toggle" class="fas fa-eye absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-500 cursor-pointer"></i> <!-- Eye Icon for Toggle -->
+                        <input id="password" class="block mt-1 w-full pr-10 pl-4" type="password" name="password"
+                            required autocomplete="current-password" />
+                        <i id="password-toggle"
+                            class="fas fa-eye absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-500 cursor-pointer"></i>
+                        <!-- Eye Icon for Toggle -->
                     </div>
                     <x-input-error :messages="$errors->get('password')" class="mt-2" />
                 </div>
@@ -39,7 +48,8 @@
                 <!-- Remember Me -->
                 <div class="form-group mt-4 flex items-center">
                     <label for="remember_me" class="inline-flex items-center gap-2">
-                        <input id="remember_me" type="checkbox" class="rounded border-gray-300 text-indigo-600 focus:ring-indigo-500" name="remember">
+                        <input id="remember_me" type="checkbox"
+                            class="rounded border-gray-300 text-indigo-600 focus:ring-indigo-500" name="remember">
                         <span class="text-sm text-gray-600">{{ __('Remember me') }}</span>
                     </label>
                 </div>
@@ -47,7 +57,8 @@
                 <!-- Forgot Password and Submit Button -->
                 <div class="form-footer mt-4">
                     @if (Route::has('password.request'))
-                        <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('password.request') }}">
+                        <a class="underline text-sm text-gray-600 hover:text-gray-900"
+                            href="{{ route('password.request') }}">
                             {{ __('Forgot your password?') }}
                         </a>
                     @endif
@@ -56,6 +67,11 @@
                         {{ __('Log in') }}
                     </x-primary-button>
                 </div>
+                <div class="mt-4 text-center">
+                    <span class="text-sm text-gray-600">Don't have an account?</span>
+                    <a href="{{ route('register') }}" class="text-sm text-red-500 hover:underline">Register</a>
+                </div>
+
             </form>
         </div>
     </div>
@@ -107,7 +123,7 @@
         .btn-submit {
             width: 70%;
             justify-content: center;
-            background-color: #007bff;
+            background-color:#239123;
             color: white;
             padding: 12px;
             border-radius: 5px;
@@ -118,11 +134,13 @@
         }
 
         .btn-submit:hover {
-            background-color: #0056b3;
+            background-color: red;
         }
 
         /* Icon Styling */
-        .fa-envelope, .fa-lock, .fa-eye {
+        .fa-envelope,
+        .fa-lock,
+        .fa-eye {
             font-size: 18px;
         }
 
@@ -166,7 +184,9 @@
                 padding: 10px;
             }
 
-            .fa-envelope, .fa-lock, .fa-eye {
+            .fa-envelope,
+            .fa-lock,
+            .fa-eye {
                 font-size: 16px;
             }
 
@@ -185,7 +205,7 @@
 
     <!-- JavaScript for Password Visibility Toggle -->
     <script>
-        document.getElementById('password-toggle').addEventListener('click', function () {
+        document.getElementById('password-toggle').addEventListener('click', function() {
             var passwordInput = document.getElementById('password');
             var passwordToggleIcon = document.getElementById('password-toggle');
             if (passwordInput.type === 'password') {
