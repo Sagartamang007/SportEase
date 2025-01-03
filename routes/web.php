@@ -9,9 +9,9 @@ Route::get('/aboutus', [PageController::class, 'aboutus'])->name('aboutus');  //
 
 
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+// Route::get('/dashboard', function () {
+//     return view('dashboard');
+// })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
@@ -19,6 +19,13 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
     Route::get('/booking',[PageController::class,'booking'])->name('booking');
 });
+
+Route::middleware('auth')->prefix('vendor')->group(function () {
+    Route::get('/dashboard', [\App\Http\Controllers\Vendor\PageController::class, 'dashboard'])->name('vendor.dashboard');
+    Route::get('/futsalform', [\App\Http\Controllers\Vendor\PageController::class, 'futsalform'])->name('vendor.futsal');
+
+});
+
 
 require __DIR__.'/auth.php';  // Authentication routes
 

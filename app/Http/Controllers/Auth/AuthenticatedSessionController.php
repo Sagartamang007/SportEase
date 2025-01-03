@@ -7,6 +7,8 @@ use App\Http\Requests\Auth\LoginRequest;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use App\Models\futsal_court;
+
 use Illuminate\View\View;
 
 class AuthenticatedSessionController extends Controller
@@ -28,13 +30,18 @@ class AuthenticatedSessionController extends Controller
 
         $request->session()->regenerate();
         if(Auth()->user()->type === 0){
-            return view('adminDashboard');
+            return view('dashboard'); //vendor of futsals
         }
-        // else(Auth()->user()->type === 2){
-        //     return view('adminDashboard');
-        // }
+        else if (Auth()->user()->type === 1){
+            $futsal = futsal_court::get();
 
-        return redirect()->intended(route('home', absolute: false));
+            return view('Frontend.pages.home', ['futsal' =>$futsal]);//normal user
+        }
+        else {
+            return view('superadmin'); //me the owner
+        }
+
+        return redirect()->route('home');
     }
 
     /**

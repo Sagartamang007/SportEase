@@ -1,7 +1,7 @@
-<x-app-layout>
+{{-- <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-red-800 dark:text-gray-200 leading-tight">
-            Admin Dashboard
+            Jerry
         </h2>
     </x-slot>
 
@@ -14,4 +14,4 @@
             </div>
         </div>
     </div>
-</x-app-layout>
+</x-app-layout> --}}

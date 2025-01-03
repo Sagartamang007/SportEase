@@ -10,16 +10,16 @@ class PageController extends Controller
     {
         $futsal = futsal_court::get();
 
-        return view('admin.pages.home',compact('futsal'));
+        return view('Frontend.pages.home',compact('futsal'));
     }
 
     public function aboutus()
     {
-        return view('admin.pages.aboutus');
+        return view('Frontend.pages.aboutus');
     }
     public function booking()
     {
-        return view('admin.pages.booking');
+        return view('Frontend.pages.booking');
     }
 }
 
