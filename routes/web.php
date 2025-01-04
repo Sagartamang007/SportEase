@@ -2,10 +2,17 @@
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\userController;
+use App\Http\Controllers\TestimonialController;
+
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', [PageController::class, 'home'])->name('home');  // Home route
 Route::get('/aboutus', [PageController::class, 'aboutus'])->name('aboutus');  // About Us route with name
+Route::get('/contactus', [PageController::class, 'contactus'])->name('contactus');  // Contact Us route with name
+Route::post('/contactus', [PageController::class, 'submit'])->name('contact.submit');  // Form submission for Contact Us route
+
+
+
 
 
 

@@ -1,11 +1,11 @@
-<nav id="navbar" class="navbar navbar-expand-lg navbar-dark fixed-top" style="background: black;">
-    <div class="container-fluid">
-        <!-- Brand/Logo -->
+<nav id="navbar" class="navbar navbar-expand-lg navbar-dark fixed-top" style="background: black;width:100%">
+    <div class="container-fluid" style="width:80%"> <!-- Added padding to push content inside -->
+        <!-- Brand -->
         <a class="navbar-brand" href="/" style="font-size: 24px; font-weight: bold;">
             SportEase
         </a>
 
-        <!-- Toggler for Mobile View -->
+        <!-- Toggler -->
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -13,43 +13,54 @@
         <!-- Navbar Links -->
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto" style="gap: 10px;">
-                <li class="nav-item">
-                    <a class="nav-link" href="/">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ route('aboutus')}}">About Us</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">My Bookings</a>
-                </li>
+                <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{ route('aboutus') }}">About Us</a></li>
 
-                <!-- Check if user is logged in -->
+                <li class="nav-item"><a class="nav-link" href="#">Blogs</a></li>
+
+                <li class="nav-item"><a class="nav-link" href="{{route('contactus')}}">Contact Us</a></li>
+
                 @guest
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ route('login') }}">Login</a>
-                    </li>
-                    <!-- Dropdown for Signup Options -->
+                    <li class="nav-item"><a class="nav-link" href="{{ route('login') }}">Login</a></li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="signupDropdown" role="button">
-                            Sign Up <i class="fas fa-angle-down dropdown-icon"></i>
+                        <a class="nav-link dropdown-toggle" href="#" id="signupDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Sign Up
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="signupDropdown" style="left: -76px;">
                             <li><a class="dropdown-item" href="{{ route('register') }}">As User</a></li>
-                            <li><a class="dropdown-item" href="{{route('Vendorcreate')}}">As Vendor</a></li>
+                            <li><a class="dropdown-item" href="{{ route('Vendorcreate') }}">As Vendor</a></li>
                         </ul>
                     </li>
-                @else
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ route('profile.edit') }}">Profile</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ route('logout') }}"
-                           onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a>
+                @endguest
+
+                @auth
+                    <!-- Profile Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="profileDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <!-- Use the icon if the user does not have a profile picture -->
+                            @if(auth()->user()->profile_picture)
+                                <img src="{{ auth()->user()->profile_picture }}" alt="Profile Picture"
+                                     style="width: 30px; height: 30px; border-radius: 50%; object-fit: cover;">
+                            @else
+                                <!-- Default icon when there is no profile picture -->
+                                <i class="fa-regular fa-user" style="font-size: 30px;"></i>
+                            @endif
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="profileDropdown">
+                            <li><a class="dropdown-item" href="#">My Bookings</a></li>
+                            <li><a class="dropdown-item" href="{{ route('profile.edit') }}">Edit Profile</a></li>
+                            <li>
+                                <a class="dropdown-item" href="{{ route('logout') }}"
+                                   onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                                    Logout
+                                </a>
+                            </li>
+                        </ul>
                         <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                             @csrf
                         </form>
                     </li>
-                @endguest
+                @endauth
             </ul>
         </div>
     </div>

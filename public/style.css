@@ -459,3 +459,132 @@ form.d-flex.scrolled .btn:focus {
         color: white;
         border-color: #0056b3;
     }
+
+    /* Calendar container */
+.flatpickr-calendar {
+    background-color: #f4f4f4; /* Light grey background */
+    border-radius: 8px;         /* Rounded corners */
+    border: 2px solid #198754;  /* Green border */
+}
+
+
+
+
+
+/* Days of the week section */
+.flatpickr-days .day {
+    background-color: #ffffff;  /* White background for days */
+    color: #333;                /* Dark text color */
+    border-radius: 4px;         /* Slight rounding of the day box */
+    transition: background-color 0.3s ease;
+}
+
+/* Highlight the current day */
+.flatpickr-days .today {
+    background-color: #198754;  /* Green background for today */
+    color: white;                /* White text */
+}
+
+/* Hover effect for the days */
+.flatpickr-days .day:hover {
+    background-color: #198754;  /* Green background on hover */
+    color: white;                /* White text on hover */
+}
+
+/* Selected date styling */
+.flatpickr-days .selected {
+    background-color: #198754;  /* Green background for selected date */
+    color: white;                /* White text */
+    border-radius: 50%;          /* Round the selected date */
+}
+
+/* Time selector dropdown */
+.flatpickr-time {
+    background-color: #198754; /* Light grey background */
+    border-radius: 8px;         /* Rounded corners */
+    border: 2px solid #198754;  /* Green border */
+    color: #333;                /* Dark text */
+}
+
+/* Button styling (optional) */
+.flatpickr-button {
+    background-color: #198754;  /* Green button */
+    color: white;                /* White text */
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Button hover effect */
+.flatpickr-button:hover {
+    background-color: #155d43;  /* Darker green when hovered */
+}
+
+/* Button active effect */
+.flatpickr-button:active {
+    background-color: #198754;  /* Green when active */
+}
+
+/* Button focus effect (when clicked/focused) */
+.flatpickr-button:focus {
+    background-color: #198754;  /* Green when focused */
+    outline: none;               /* Optional: Remove default focus outline */
+}
+
+/* Remove underline from date numbers */
+.fc-day-number {
+    text-decoration: none !important;
+    cursor: pointer;
+}
+
+/* Active date styling */
+.fc-day-clicked {
+    background-color: #198754 !important;  /* Green background */
+    color: white !important;                /* White text */
+}
+
+/* Optional: Clean up the calendar's date styling */
+.fc-day-number {
+    border: none !important;                /* Remove borders around the date */
+}
+.fc-daygrid-day-number{
+    text-decoration: none;
+    color: black;
+    font-weight:600 ;
+    font-size: 1rem;
+}
+.fc-col-header-cell-cushion{
+    color: black;
+    text-decoration: none;
+}
+.fc-day-today {
+    color: #198754;
+}
+.fc-today-button fc-button fc-button-primary{
+background: none;
+border: none;
+}
+.fc-toolbar-chunk{
+    display: flex;
+}
+
+
+/*time slot ui*/
+/* Styling for the time selector section */
+.time-selector select {
+    padding: 8px;
+    margin: 5px 0;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Styling for the selected time */
+#selectedSlot {
+    font-size: 18px;
+    font-weight: bold;
+    color: #198754;
+}
+

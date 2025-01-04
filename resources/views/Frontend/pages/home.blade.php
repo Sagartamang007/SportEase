@@ -69,5 +69,91 @@
                             </div> --}}
             </div>
 
+
     </section>
+    <!-- Features Section -->
+    <section class="features-section py-5">
+        <div class="container">
+            <div class="row text-center mb-4">
+                <div class="col">
+                    <h3>Why Choose SportEase?</h3>
+                    <p>Discover the benefits of using our platform for your futsal bookings.</p>
+                </div>
+            </div>
+            <div class="row text-center">
+                <div class="col-md-4 mb-4">
+                    <div class="feature-box">
+                        <i class="fas fa-calendar-check fa-3x text-success mb-3"></i>
+                        <h5>Seamless Booking</h5>
+                        <p>Book futsal courts instantly with just a few clicks.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="feature-box">
+                        <i class="fas fa-map-marker-alt fa-3x text-success mb-3"></i>
+                        <h5>Convenient Locations</h5>
+                        <p>Find futsal courts near you with detailed information.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="feature-box">
+                        <i class="fas fa-clock fa-3x text-success mb-3"></i>
+                        <h5>Flexible Scheduling</h5>
+                        <p>Choose a time slot that fits your schedule and enjoy uninterrupted gameplay.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials-section py-5 bg-light">
+        <div class="container">
+            <div class="row text-center mb-4">
+                <div class="col">
+                    <h3>What Our Users Say</h3>
+                    <p>Hear from the players who love SportEase.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="testimonial-card p-4 bg-white shadow-sm text-center">
+                        <p class="testimonial-text">"SportEase made booking futsal courts so much easier. Highly
+                            recommend!"</p>
+                        <h6 class="mt-3">- John Doe</h6>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="testimonial-card p-4 bg-white shadow-sm text-center">
+                        <p class="testimonial-text">"Great platform! I found the best futsal court near me in minutes."</p>
+                        <h6 class="mt-3">- Jane Smith</h6>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="testimonial-card p-4 bg-white shadow-sm text-center">
+                        <p class="testimonial-text">"The seamless booking process is a game changer for futsal lovers."</p>
+                        <h6 class="mt-3">- Michael Brown</h6>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="testimonial-card p-4 bg-white shadow-sm text-center">
+                        <p class="testimonial-text">"The seamless booking process is a game changer for futsal lovers."</p>
+                        <h6 class="mt-3">- Michael Brown</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section class="cta-section py-5 text-white" style="background-color: #0d6efd;">
+        <div class="container text-center">
+            <h3 class="mb-3">Ready to Play?</h3>
+            <p>Don't wait! Book your futsal court now and enjoy an amazing game with your friends.</p>
+            <a href="{{Route('booking')}}" class="btn btn-light btn-lg">Book Now</a>
+        </div>
+    </section>
+
+
+
 @endsection

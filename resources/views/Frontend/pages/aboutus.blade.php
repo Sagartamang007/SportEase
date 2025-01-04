@@ -2,8 +2,9 @@
 @section('content')
 
 <div class="container py-5">
-    <div class="hero-section mb-5" style="background-image: url({{asset('bg1.jpg')}}); background-size: cover;">
-        <div class="overlay py-5">
+    <!-- Hero Section -->
+    <div class="hero-section mb-5" style="background-image: url({{asset('images/about-hero.jpg')}}); background-size: cover; height: 50vh;">
+        <div class="overlay py-5" style="height: 100%;">
             <div class="text-center text-white">
                 <h1 class="display-4">About Us</h1>
                 <p class="lead">Learn more about SportEase and how we're revolutionizing the sports booking experience.</p>
@@ -11,6 +12,7 @@
         </div>
     </div>
 
+    <!-- Welcome Section -->
     <div class="row">
         <div class="col-lg-6">
             <h2>Welcome to SportEase</h2>
@@ -18,11 +20,11 @@
         </div>
 
         <div class="col-lg-6">
-            <img src="/images/booking-platform.jpg" class="img-fluid rounded" alt="SportEase Platform">
+            <img src="{{ asset('images/booking-platform.jpg') }}" class="img-fluid rounded" alt="SportEase Platform" style="width: 100%; height: 50vh; object-fit: cover;">
         </div>
     </div>
 
-    <!-- Section 2: Our Mission -->
+    <!-- Our Mission Section -->
     <div class="row mt-4">
         <div class="col-lg-6">
             <h2>Our Mission</h2>
@@ -30,11 +32,11 @@
         </div>
 
         <div class="col-lg-6">
-            <img src="/images/mission.jpg" class="img-fluid rounded" alt="Our Mission">
+            <img src="{{ asset('images/mission.jpg') }}" class="img-fluid rounded" alt="Our Mission" style="width: 100%; height: 50vh; object-fit: cover;">
         </div>
     </div>
 
-    <!-- Section 3: Our Vision -->
+    <!-- Our Vision Section -->
     <div class="row mt-4">
         <div class="col-12">
             <h2>Our Vision</h2>
@@ -42,38 +44,35 @@
         </div>
     </div>
 
-    <!-- Section 4: Our Team -->
+    <!-- Our Team Section -->
     <div class="row mt-4">
         <div class="col-12">
             <h2>Meet Our Team</h2>
             <div class="row">
                 <div class="col-md-4 mb-4">
                     <div class="card">
-                        <div class="content">
-                          <svg fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M20 9V5H4V9H20ZM20 11H4V19H20V11ZM3 3H21C21.5523 3 22 3.44772 22 4V20C22 20.5523 21.5523 21 21 21H3C2.44772 21 2 20.5523 2 20V4C2 3.44772 2.44772 3 3 3ZM5 12H8V17H5V12ZM5 6H7V8H5V6ZM9 6H11V8H9V6Z"></path>
-                          </svg>
-                          <p class="para">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi laboriosam at voluptas minus culpa deserunt delectus sapiente inventore pariatur</p>
+                        <img src="{{ asset('images/team1.jpg') }}" class="card-img-top" alt="Team Member 1" style="height: 200px; object-fit: cover;">
+                        <div class="card-body">
+                            <h5 class="card-title">John Doe</h5>
+                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet pharetra augue, eu interdum ante.</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4 mb-4">
                     <div class="card">
-                        <div class="content">
-                          <svg fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M20 9V5H4V9H20ZM20 11H4V19H20V11ZM3 3H21C21.5523 3 22 3.44772 22 4V20C22 20.5523 21.5523 21 21 21H3C2.44772 21 2 20.5523 2 20V4C2 3.44772 2.44772 3 3 3ZM5 12H8V17H5V12ZM5 6H7V8H5V6ZM9 6H11V8H9V6Z"></path>
-                          </svg>
-                          <p class="para">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi laboriosam at voluptas minus culpa deserunt delectus sapiente inventore pariatur</p>
+                        <img src="{{ asset('images/team2.jpg') }}" class="card-img-top" alt="Team Member 2" style="height: 200px; object-fit: cover;">
+                        <div class="card-body">
+                            <h5 class="card-title">Jane Smith</h5>
+                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet pharetra augue, eu interdum ante.</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4 mb-4">
                     <div class="card">
-                        <div class="content">
-                          <svg fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M20 9V5H4V9H20ZM20 11H4V19H20V11ZM3 3H21C21.5523 3 22 3.44772 22 4V20C22 20.5523 21.5523 21 21 21H3C2.44772 21 2 20.5523 2 20V4C2 3.44772 2.44772 3 3 3ZM5 12H8V17H5V12ZM5 6H7V8H5V6ZM9 6H11V8H9V6Z"></path>
-                          </svg>
-                          <p class="para">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi laboriosam at voluptas minus culpa deserunt delectus sapiente inventore pariatur</p>
+                        <img src="{{ asset('images/team3.jpg') }}" class="card-img-top" alt="Team Member 3" style="height: 200px; object-fit: cover;">
+                        <div class="card-body">
+                            <h5 class="card-title">Sam Wilson</h5>
+                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet pharetra augue, eu interdum ante.</p>
                         </div>
                     </div>
                 </div>
@@ -81,7 +80,7 @@
         </div>
     </div>
 
-    <!-- Section 5: Why Choose SportEase -->
+    <!-- Why Choose Us Section -->
     <div class="row mt-4">
         <div class="col-12">
             <h2>Why Choose SportEase?</h2>
@@ -95,12 +94,12 @@
         </div>
     </div>
 
-    <!-- Section 6: Get In Touch -->
+    <!-- Get In Touch Section -->
     <div class="row mt-4">
         <div class="col-12 text-center">
             <h2>Get In Touch</h2>
             <p>If you have any questions or feedback, feel free to contact us. We'd love to hear from you!</p>
-            {{-- <a href="{{route('contactus')}}" class="btn btn-primary btn-lg">Contact Us</a> --}}
+            <a href="{{route('contactus')}}" class="btn btn-primary btn-lg">Contact Us</a>
         </div>
     </div>
 </div>
