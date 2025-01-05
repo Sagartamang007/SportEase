@@ -30,7 +30,7 @@ class AuthenticatedSessionController extends Controller
 
         $request->session()->regenerate();
         if(Auth()->user()->type === 0){
-            return view('dashboard'); //vendor of futsals
+            return view('Vendor.dashboard'); //vendor of futsals
         }
         else if (Auth()->user()->type === 1){
             $futsal = futsal_court::get();
@@ -47,14 +47,32 @@ class AuthenticatedSessionController extends Controller
     /**
      * Destroy an authenticated session.
      */
+    // public function destroy(Request $request): RedirectResponse
+    // {
+    //     Auth::guard('web')->logout();
+
+    //     $request->session()->invalidate();
+
+    //     $request->session()->regenerateToken();
+
+    //     return redirect('/');
+    // }
     public function destroy(Request $request): RedirectResponse
-    {
-        Auth::guard('web')->logout();
+{
+    // Logout the user from their guard
+    Auth::guard()->logout();
 
-        $request->session()->invalidate();
+    // Invalidate the session
+    $request->session()->invalidate();
+    $request->session()->regenerateToken();
 
-        $request->session()->regenerateToken();
-
-        return redirect('/');
+    // Check if the user is a vendor and redirect accordingly
+    if ($request->user() && $request->user()->hasRole('vendor')) {
+        return redirect()->route('vendor.login'); // Redirect to vendor login
     }
+
+    // Default redirection for general users
+    return redirect('/');
+}
+
 }
