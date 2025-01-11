@@ -28,6 +28,8 @@
                         Browse through our futsal courts, check their locations and rates, and book instantly for an
                         exciting game!
                     </p>
+                    <a href="{{route('available.futsal')}}" class="btn  mt-3" style="color: #198754;">View Futsals</a>
+
                 </div>
             </div>
 
@@ -39,7 +41,7 @@
                         <div class="swiper-slide">
                             <div class="card futsal-card shadow-sm">
                                 <div class="futsal-image">
-                                    <img src="https://via.placeholder.com/400x200?text=Greenfield+Futsal" alt="Futsal Image"
+                                    <img src="{{asset('f3.jpg')}}" alt="Futsal Image"
                                         class="w-100 rounded-top">
                                 </div>
                                 <div class="card-body text-center">
@@ -145,14 +147,14 @@
         </div>
     </section>
 
-    <!-- Call to Action Section -->
-    <section class="cta-section py-5 text-white" style="background-color: #0d6efd;">
+    {{-- <!-- Call to Action Section -->
+    <section class="cta-section py-5 text-white" style="background-color:rgb(0, 128, 0);">
         <div class="container text-center">
             <h3 class="mb-3">Ready to Play?</h3>
             <p>Don't wait! Book your futsal court now and enjoy an amazing game with your friends.</p>
             <a href="{{Route('booking')}}" class="btn btn-light btn-lg">Book Now</a>
         </div>
-    </section>
+    </section> --}}
 
 
 

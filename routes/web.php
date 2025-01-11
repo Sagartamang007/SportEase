@@ -11,6 +11,10 @@ Route::get('/', [PageController::class, 'home'])->name('home');  // Home route
 Route::get('/aboutus', [PageController::class, 'aboutus'])->name('aboutus');  // About Us route
 Route::get('/contactus', [PageController::class, 'contactus'])->name('contactus');  // Contact Us route
 Route::post('/contactus', [PageController::class, 'submit'])->name('contact.submit');  // Form submission for Contact Us route
+Route::get('/futsals', [PageController::class, 'futsals'])->name('available.futsal');  // Store booking
+Route::get('/blogs', [PageController::class, 'blogs'])->name('blogs');  // Store booking
+
+
 
 // Booking Routes
 Route::middleware('auth')->group(function () {
@@ -19,6 +23,7 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
     Route::get('/booking', [PageController::class, 'booking'])->name('booking');  // Show the booking form
     Route::post('/bookings', [BookingController::class, 'store'])->name('bookings.store');  // Store booking
+
 
 });
 

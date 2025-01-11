@@ -67,9 +67,13 @@ class AuthenticatedSessionController extends Controller
     $request->session()->regenerateToken();
 
     // Check if the user is a vendor and redirect accordingly
-    if ($request->user() && $request->user()->hasRole('vendor')) {
-        return redirect()->route('vendor.login'); // Redirect to vendor login
+    // if ($request->user() && $request->user()->hasRole('vendor')) {
+    //     return redirect()->route('vendor.login'); // Redirect to vendor login
+    // }
+    if (Auth::user() && Auth::user()->hasRole('vendor')) {
+        return redirect()->route('vendor.login');
     }
+
 
     // Default redirection for general users
     return redirect('/');

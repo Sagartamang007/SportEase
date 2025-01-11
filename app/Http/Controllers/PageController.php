@@ -30,6 +30,15 @@ class PageController extends Controller
     {
         return view('Frontend.pages.contactus');
     }
+    public function futsals()
+    {
+        return view('Frontend.pages.futsals');
+    }
+    public function blogs()
+    {
+        return view('Frontend.pages.blogs');
+    }
+
 
     // Add the submit method to handle form submission
     public function submit(Request $request)

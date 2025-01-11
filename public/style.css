@@ -282,7 +282,7 @@ form.d-flex.scrolled .btn:focus {
 .futsal-card {
     border-radius: 8px;
     overflow: hidden;
-    margin: 10px;
+    margin-top: 1rem;
     position: relative; /* Makes sure cards don't overflow */
 }
 
@@ -373,6 +373,33 @@ form.d-flex.scrolled .btn:focus {
         left: -10px;
     }
 }
+
+
+    /* Custom Tooltip Styling */
+    .tooltip-inner {
+        background-color: rgb(0, 128, 0);
+        /*Darkbackground*/color: #fff;
+        /*Whitetext*/padding: 8px 12px;
+        font-size: 0.9rem;
+        border-radius: 10px;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        -ms-border-radius: 10px;
+        -o-border-radius: 10px;
+}
+
+    .tooltip.bs-tooltip-top .arrow::before {
+        border-top-color: #6c757d; /* Match the tooltip background */
+    }
+
+    .tooltip.bs-tooltip-bottom .arrow::before {
+        border-bottom-color: #6c757d; /* Match the tooltip background */
+    }
+
+    /* Ensure tooltip is triggered only by hover (no click) */
+    .btn {
+        pointer-events: auto !important; /* Ensure tooltips still trigger on hover */
+    }
 
 
 
@@ -533,42 +560,6 @@ form.d-flex.scrolled .btn:focus {
     outline: none;               /* Optional: Remove default focus outline */
 }
 
-/* Remove underline from date numbers */
-.fc-day-number {
-    text-decoration: none !important;
-    cursor: pointer;
-}
-
-/* Active date styling */
-.fc-day-clicked {
-    background-color: #198754 !important;  /* Green background */
-    color: white !important;                /* White text */
-}
-
-/* Optional: Clean up the calendar's date styling */
-.fc-day-number {
-    border: none !important;                /* Remove borders around the date */
-}
-.fc-daygrid-day-number{
-    text-decoration: none;
-    color: black;
-    font-weight:600 ;
-    font-size: 1rem;
-}
-.fc-col-header-cell-cushion{
-    color: black;
-    text-decoration: none;
-}
-.fc-day-today {
-    color: #198754;
-}
-.fc-today-button fc-button fc-button-primary{
-background: none;
-border: none;
-}
-.fc-toolbar-chunk{
-    display: flex;
-}
 
 
 /*time slot ui*/

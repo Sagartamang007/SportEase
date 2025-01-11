@@ -16,7 +16,7 @@
                 <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
                 <li class="nav-item"><a class="nav-link" href="{{ route('aboutus') }}">About Us</a></li>
 
-                <li class="nav-item"><a class="nav-link" href="#">Blogs</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{route('blogs')}}">Blogs</a></li>
 
                 <li class="nav-item"><a class="nav-link" href="{{route('contactus')}}">Contact Us</a></li>
 
