@@ -27,6 +27,14 @@
 
     <!-- Flatpickr CSS -->
     <link href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" rel="stylesheet">
+    <link href="{{asset('vendor/css/style.css')}}" rel="stylesheet">
+    <link href="{{ asset('vendor/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('vendor/vendor/bootstrap-icons/bootstrap-icons.css') }}" rel="stylesheet">
+    <link href="{{ asset('vendor/vendor/boxicons/css/boxicons.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('vendor/vendor/quill/quill.snow.css') }}" rel="stylesheet">
+    <link href="{{ asset('vendor/vendor/quill/quill.bubble.css') }}" rel="stylesheet">
+    <link href="{{ asset('vendor/vendor/remixicon/remixicon.css') }}" rel="stylesheet">
+    <link href="{{ asset('vendor/vendor/simple-datatables/style.css') }}" rel="stylesheet">
 
     <title>SportEase</title>
 </head>
@@ -58,7 +66,17 @@
 
     <!-- Moment.js -->
     <script src="https://cdn.jsdelivr.net/npm/moment@2.29.1/moment.min.js"></script>
+    <script src="{{ asset('vendor/vendor/apexcharts/apexcharts.min.js') }}"></script>
+    <script src="{{ asset('vendor/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+    <script src="{{ asset('vendor/vendor/chart.js/chart.umd.js') }}"></script>
+    <script src="{{ asset('vendor/vendor/echarts/echarts.min.js') }}"></script>
+    <script src="{{ asset('vendor/vendor/quill/quill.js') }}"></script>
+    <script src="{{ asset('vendor/vendor/simple-datatables/simple-datatables.js') }}"></script>
+    <script src="{{ asset('vendor/vendor/tinymce/tinymce.min.js') }}"></script>
+    <script src="{{ asset('vendor/vendor/php-email-form/validate.js') }}"></script>
 
+    <!-- Template Main JS File -->
+    <script src="{{ asset('vendor/js/main.js') }}"></script>
 </body>
 
 </html>
