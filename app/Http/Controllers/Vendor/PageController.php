@@ -13,4 +13,11 @@ class PageController extends Controller
     public function futsalform(){
         return view('Vendor.futsalform');
 }
+    public function myprofile(){
+            return view('Vendor.myprofile');
+    }
+    public function bookings(){
+        return view('Vendor.bookings');
+}
+
 }

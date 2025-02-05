@@ -31,6 +31,10 @@ Route::middleware('auth')->group(function () {
 Route::middleware('auth')->prefix('vendor')->group(function () {
     Route::get('/dashboard', [\App\Http\Controllers\Vendor\PageController::class, 'dashboard'])->name('vendor.dashboard');
     Route::get('/futsalform', [\App\Http\Controllers\Vendor\PageController::class, 'futsalform'])->name('vendor.futsal');
+    Route::get('/vendor/profile', [\App\Http\Controllers\Vendor\PageController::class, 'myprofile'])->name('vendor.profile');
+    Route::get('/vendor/bookings', [\App\Http\Controllers\Vendor\PageController::class, 'bookings'])->name('vendor.bookings');
+
+
 });
 
 // Authentication Routes

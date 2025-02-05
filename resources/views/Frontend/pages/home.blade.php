@@ -12,7 +12,7 @@
             <div class="container text-center">
                 <h1>Welcome to SportEase</h1>
                 <p>Your trusted solution for seamless Futsal bookings.</p>
-                <a href="{{Route('booking')}}" class=" nums">Book Now</a>
+                {{-- <a href="{{Route('booking')}}" class=" nums">Book Now</a> --}}
             </div>
         </div>
     </section>

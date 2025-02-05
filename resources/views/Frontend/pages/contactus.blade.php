@@ -37,7 +37,7 @@
                         </div>
 
                         <!-- Submit Button -->
-                        <button type="submit" class="btn nums-but">Send Message</button>
+                        <button type="submit" class=" nums-but">Send Message</button>
                     </form>
                 </div>
             </div>

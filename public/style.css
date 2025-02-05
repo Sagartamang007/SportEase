@@ -184,9 +184,9 @@ form.d-flex.scrolled .btn:focus {
 /* Hover effect: transparent background */
 .nums:hover {
     background-color: transparent;  /* Transparent background on hover */
-    color: black;                    /* Change text color to green */
+    color: rgb(0, 128, 0) ;                    /* Change text color to green */
     opacity: 0.8;                    /* Slightly transparent */
-    border:1px solid black;             /* Ensure border color matches text color */
+    border:1px solid  rgb(0, 128, 0);             /* Ensure border color matches text color */
 }
 
 /* Hero Section */
@@ -326,13 +326,13 @@ form.d-flex.scrolled .btn:focus {
     text-decoration: none;
     border-radius: 5px;
     font-size: 16px;
-    display: inline-block;
     transition: background-color 0.3s ease, color 0.3s ease, opacity 0.3s ease;
 }
 
 .nums-but:hover {
     border: 1px solid rgb(0, 128, 0);
-    color: black; /* Text color on hover */
+    background:none;
+    color: rgb(0, 128, 0); /* Text color on hover */
     opacity: 0.8;
 }
 

@@ -20,7 +20,7 @@
 
       <!-- Bookings -->
       <li class="nav-item">
-        <a class="nav-link" href="index.html">
+        <a class="nav-link" href="{{route('vendor.bookings')}}">
           <i class="bi bi-calendar-check"></i> <!-- Calendar icon for bookings -->
           <span>Bookings</span>
         </a>
